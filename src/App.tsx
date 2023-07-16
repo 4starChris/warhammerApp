@@ -56,7 +56,7 @@ function generateDatasheet() {
         </div>
         <div className="UnitMainBox">
           <div className="UnitWeaponsBox">
-            <table className="RangedWeapons">
+            <table className="RangedWeapons WeaponsTable">
               <tbody>
                 <tr className="WeaponHeader">
                   <th>Ranged Weapons</th>
@@ -81,7 +81,7 @@ function generateDatasheet() {
               </tbody>
             </table>
 
-            <table className="MeleeWeapons">
+            <table className="MeleeWeapons WeaponsTable">
               <tbody>
                 <tr className="WeaponHeader">
                   <th>Melee Weapons</th>

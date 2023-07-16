@@ -63,7 +63,8 @@ const rangedWeaponsMap = new Map<string, weapon>([
 ]);
 
 export function getRangedWeaponsList(ListOfWeaponNames: string[]) {
-  return getItemListFromMapUsingStringList(ListOfWeaponNames, rangedWeaponsMap);
+  // return getItemListFromMapUsingStringList(ListOfWeaponNames, rangedWeaponsMap);
+  return ListOfWeaponNames.map(e => rangedWeaponsMap.get(e) as weapon)
 }
 
 let meleeWeaponsMap = new Map<string, weapon>();

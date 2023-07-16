@@ -119,6 +119,7 @@ let weaponKeyWordsMap = new Map<string, string>([
   ],
 ]);
 
+//Provide a list of names. It will search a map, and return a list of items
 export function getItemListFromMapUsingStringList(
   listOfThingsToSearch: string[],
   mapToSearch: Map<string, any>

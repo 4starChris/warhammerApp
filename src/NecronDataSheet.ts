@@ -33,7 +33,7 @@ const necronWarriors = new UnitDataSheet(
   factionAbility,
   ["Their Number is Legion"],
   [],
-  ["Infanctry, Battleline, Necron Warriors"],
+  ["Infantry, Battleline, Necron Warriors"],
   [new weapon("Close Combat Weapon", [], 0, 1, 4, 4, 0, 1)],
   getRangedWeaponsList(["Gauss Flayer", "Gauss Reaper"])
 );
@@ -50,7 +50,7 @@ const immortals = new UnitDataSheet(
   factionAbility,
   ["Implacable Eradiction"],
   [],
-  ["Infanctry", "Battleline", "Immortals"],
+  ["Infantry", "Battleline", "Immortals"],
   [new weapon("Close Combat Weapon", [], 0, 2, 3, 4, 0, 1)],
   getRangedWeaponsList(["Gauss Blaster", "Tesla Carbine"])
 );

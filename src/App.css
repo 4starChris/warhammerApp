@@ -1,0 +1,9 @@
+.Stats {
+    display: flex;
+    column-gap: 20px;
+}
+
+.Stat-Item-Pair {
+    display: flex;
+    flex-direction: column;
+}
