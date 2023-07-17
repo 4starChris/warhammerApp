@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { UnitList, searchUnitList } from "./NecronDataSheet.ts";
-import { getAbility } from "./NecronFaction.ts";
+import { getAbility, getRangedWeaponsList } from "./NecronFaction.ts";
 
 function generateDatasheet() {
   const [unit, setUnit] = useState(UnitList[0]);
@@ -29,27 +29,27 @@ function generateDatasheet() {
           <div className="Name">{unit.name}</div>
           <div className="Stats">
             <div className="Stat-Item-Pair">
-              <div>M</div>
+              <div className="Stat-Header">M</div>
               <div>{unit.moveSpeed}</div>
             </div>
             <div className="Stat-Item-Pair">
-              <div>T</div>
+              <div className="Stat-Header">T</div>
               <div>{unit.toughness}</div>
             </div>
             <div className="Stat-Item-Pair">
-              <div>SV</div>
+              <div className="Stat-Header">SV</div>
               <div>{unit.save + "+"}</div>
             </div>
             <div className="Stat-Item-Pair">
-              <div>W</div>
+              <div className="Stat-Header">W</div>
               <div>{unit.wounds}</div>
             </div>
             <div className="Stat-Item-Pair">
-              <div>LD</div>
+              <div className="Stat-Header">LD</div>
               <div>{unit.leadership + "+"}</div>
             </div>
             <div className="Stat-Item-Pair">
-              <div>OC</div>
+              <div className="Stat-Header">OC</div>
               <div>{unit.objectiveControl}</div>
             </div>
           </div>
@@ -68,7 +68,11 @@ function generateDatasheet() {
               </div>
               {rangedWeapons.map((weapon) => (
                 <div className="Weapon WeaponRow">
-                  <div className="WeaponName">{weapon.name}</div>
+                  {/* The map below is to prepare to add more code so I can create an information box on mouse hover */}
+                  <div className="WeaponName">
+                    {weapon.name + "   ["}{" "}
+                    {weapon.keywordsList.map((keyword) => keyword)} {"]"}
+                  </div>
                   <div>{weapon.range + '"'}</div>
                   <div>{weapon.attacks}</div>
                   <div>{weapon.ballisticSkill + "+"}</div>

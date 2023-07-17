@@ -1,49 +1,59 @@
 .Stats {
-    display: flex;
-    column-gap: 20px;
+  display: flex;
+  column-gap: 20px;
 }
 
 .Stat-Item-Pair {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.Stat-Header {
+  font-weight: bold;
+  font-size: 14pt;
 }
 
 .UnitMainBox {
-    display: flex;
+  display: flex;
 }
 
 .UnitAllWeaponsBox {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .UnitWeaponsBox {
-    display: flex;
-    flex-direction: column;
-    column-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
 }
 .WeaponHeader {
-    display: flex;
+  display: flex;
 }
 
 .WeaponRow > .WeaponName {
-    width: 200px;
+  width: 300px;
 }
 
+/* Affects weapon table width */
 .WeaponRow > div {
-    width: 100px;
+  width: 60px;
 }
 
 .WeaponHeader {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .Weapon {
-    display: flex;
+  display: flex;
 }
 
 .AbilitiesHeader {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h3 {
+  margin: 0px;
 }
