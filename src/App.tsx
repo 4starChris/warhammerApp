@@ -55,65 +55,61 @@ function generateDatasheet() {
           </div>
         </div>
         <div className="UnitMainBox">
-          <div className="UnitWeaponsBox">
-            <table className="RangedWeapons WeaponsTable">
-              <tbody>
-                <tr className="WeaponHeader">
-                  <th>Ranged Weapons</th>
-                  <th>Range</th>
-                  <th>A</th>
-                  <th>BS</th>
-                  <th>S</th>
-                  <th>AP</th>
-                  <th>D</th>
-                </tr>
-                {rangedWeapons.map((weapon) => (
-                  <tr className="Weapon">
-                    <td>{weapon.name}</td>
-                    <td>{weapon.range + '"'}</td>
-                    <td>{weapon.attacks}</td>
-                    <td>{weapon.ballisticSkill + "+"}</td>
-                    <td>{weapon.strength + "+"}</td>
-                    <td>{"-" + weapon.armorPiercing}</td>
-                    <td>{weapon.damage}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="UnitAllWeaponsBox">
+            <div className="UnitWeaponsBox">
+              <div className="WeaponHeader WeaponRow">
+                <div className="WeaponName">Ranged Weapons</div>
+                <div>Range</div>
+                <div>A</div>
+                <div>BS</div>
+                <div>S</div>
+                <div>AP</div>
+                <div>D</div>
+              </div>
+              {rangedWeapons.map((weapon) => (
+                <div className="Weapon WeaponRow">
+                  <div className="WeaponName">{weapon.name}</div>
+                  <div>{weapon.range + '"'}</div>
+                  <div>{weapon.attacks}</div>
+                  <div>{weapon.ballisticSkill + "+"}</div>
+                  <div>{weapon.strength + "+"}</div>
+                  <div>{"-" + weapon.armorPiercing}</div>
+                  <div>{weapon.damage}</div>
+                </div>
+              ))}
+            </div>
 
-            <table className="MeleeWeapons WeaponsTable">
-              <tbody>
-                <tr className="WeaponHeader">
-                  <th>Melee Weapons</th>
-                  <th>Range</th>
-                  <th>A</th>
-                  <th>BS</th>
-                  <th>S</th>
-                  <th>AP</th>
-                  <th>D</th>
-                </tr>
-                {meleeWeapons.map((weapon) => (
-                  <tr className="Weapon">
-                    <td>{weapon.name}</td>
-                    <td>{"melee"}</td>
-                    <td>{weapon.attacks}</td>
-                    <td>{weapon.ballisticSkill + "+"}</td>
-                    <td>{weapon.strength + "+"}</td>
-                    <td>{"-" + weapon.armorPiercing}</td>
-                    <td>{weapon.damage}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="UnitWeaponsBox">
+              <div className="WeaponHeader WeaponRow">
+                <div className="WeaponName">Melee Weapons</div>
+                <div>Range</div>
+                <div>A</div>
+                <div>BS</div>
+                <div>S</div>
+                <div>AP</div>
+                <div>D</div>
+              </div>
+              {meleeWeapons.map((weapon) => (
+                <div className="Weapon WeaponRow">
+                  <div className="WeaponName">{weapon.name}</div>
+                  <div>{"melee"}</div>
+                  <div>{weapon.attacks}</div>
+                  <div>{weapon.ballisticSkill + "+"}</div>
+                  <div>{weapon.strength + "+"}</div>
+                  <div>{"-" + weapon.armorPiercing}</div>
+                  <div>{weapon.damage}</div>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="UnitAbilitiesBox">
             <div className="AbilitiesHeader">Abilities</div>
             <div className="AbilitiesText">
-              {unit.FactionAbility.name + ": " + unit.FactionAbility.text}
+              <b>{unit.FactionAbility.name}</b>: {unit.FactionAbility.text}
             </div>
             {abilities.map((abilityName) => (
               <div>
-                {abilityName}: {getAbility(abilityName)}
+                <b>{abilityName}</b>: {getAbility(abilityName)}
               </div>
             ))}
             <div className="WargearAbilitiesHeader"></div>

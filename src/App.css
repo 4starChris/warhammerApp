@@ -7,3 +7,43 @@
     display: flex;
     flex-direction: column;
 }
+
+.UnitMainBox {
+    display: flex;
+}
+
+.UnitAllWeaponsBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.UnitWeaponsBox {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+}
+.WeaponHeader {
+    display: flex;
+}
+
+.WeaponRow > .WeaponName {
+    width: 200px;
+}
+
+.WeaponRow > div {
+    width: 100px;
+}
+
+.WeaponHeader {
+    font-weight: bold;
+}
+
+.Weapon {
+    display: flex;
+}
+
+.AbilitiesHeader {
+    font-weight: bold;
+    font-size: 16px;
+}
